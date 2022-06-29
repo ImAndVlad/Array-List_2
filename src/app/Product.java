@@ -1,4 +1,4 @@
-package app.models;
+package app;
 
 public class Product {
 
@@ -7,6 +7,6 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product name: " + name + " price: USD " + price;
+        return "\tProduct name: " + name + " price: USD " + price;
     }
 }

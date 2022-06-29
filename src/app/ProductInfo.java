@@ -1,10 +1,15 @@
-package app.models;
+package app;
 
 import java.util.*;
 
-public class ProductInfo implements List<Product> {
+public class ProductInfo extends Product implements List<Product> {
 
     ArrayList<Product> list = new ArrayList<>();
+
+    @Override
+    public String toString() {
+        return "Product name: " + super.name + " price: USD " + super.price;
+    }
 
     @Override
     public int size() {
@@ -13,27 +18,27 @@ public class ProductInfo implements List<Product> {
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return list.isEmpty();
     }
 
     @Override
     public boolean contains(Object o) {
-        return false;
+        return list.contains(o);
     }
 
     @Override
     public Iterator<Product> iterator() {
-        return null;
+        return list.iterator();
     }
 
     @Override
     public Object[] toArray() {
-        return new Object[0];
+        return list.toArray();
     }
 
     @Override
     public <T> T[] toArray(T[] a) {
-        return null;
+        return list.toArray(a);
     }
 
     @Override
@@ -43,47 +48,47 @@ public class ProductInfo implements List<Product> {
 
     @Override
     public boolean remove(Object o) {
-        return false;
+        return list.remove(o);
     }
 
     @Override
     public boolean containsAll(Collection<?> c) {
-        return false;
+        return list.containsAll(c);
     }
 
     @Override
     public boolean addAll(Collection<? extends Product> c) {
-        return false;
+        return list.addAll(c);
     }
 
     @Override
     public boolean addAll(int index, Collection<? extends Product> c) {
-        return false;
+        return list.addAll(index, c);
     }
 
     @Override
     public boolean removeAll(Collection<?> c) {
-        return false;
+        return list.removeAll(c);
     }
 
     @Override
     public boolean retainAll(Collection<?> c) {
-        return false;
+        return list.retainAll(c);
     }
 
     @Override
     public void clear() {
-
+        list.clear();
     }
 
     @Override
     public Product get(int index) {
-        return null;
+        return list.get(index);
     }
 
     @Override
     public Product set(int index, Product element) {
-        return null;
+        return list.set(index, element);
     }
 
     @Override
@@ -93,31 +98,31 @@ public class ProductInfo implements List<Product> {
 
     @Override
     public Product remove(int index) {
-        return null;
+        return list.remove(index);
     }
 
     @Override
     public int indexOf(Object o) {
-        return 0;
+        return list.indexOf(o);
     }
 
     @Override
     public int lastIndexOf(Object o) {
-        return 0;
+        return list.lastIndexOf(o);
     }
 
     @Override
     public ListIterator<Product> listIterator() {
-        return null;
+        return list.listIterator();
     }
 
     @Override
     public ListIterator<Product> listIterator(int index) {
-        return null;
+        return list.listIterator(index);
     }
 
     @Override
     public List<Product> subList(int fromIndex, int toIndex) {
-        return null;
+        return list.subList(fromIndex, toIndex);
     }
 }
